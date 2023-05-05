@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기들</title>
+  </head>
+  <body>
+    <section class="basic1">
+      <h2 class="basic1-title">계산기1</h2>
+      <label for="basic1-input-1">입력 1</label>
+      <input type="text" id="basic1-input-1" />
+      <br />
+      <p class="basic1-symbol">연산 선택</p>
+      <input
+        type="radio"
+        id="plus"
+        value="plus"
+        name="basic1-symbol-radio"
+        checked
+      />
+      <label for="plus">+</label>
+      <input type="radio" id="minus" value="minus" name="basic1-symbol-radio" />
+      <label for="minus">-</label>
+      <input
+        type="radio"
+        id="multiply"
+        value="multiply"
+        name="basic1-symbol-radio"
+      />
+      <label for="multiply">x</label>
+      <input
+        type="radio"
+        id="divide"
+        value="divide"
+        name="basic1-symbol-radio"
+      />
+      <label for="divide">/</label>
+      <br />
+      <label for="basic1-input-2">입력 2</label>
+      <input type="text" id="basic1-input-2" />
+      <button class="basic1-result-button">계산하기</button>
+      <p class="basic1-result-title">연산결과 :</p>
+      <p class="basic1-result-content"></p>
+    </section>
+    <section class="basic2">
+      <h3>계산기 2</h3>
+      <p>input으로 입력을 받아 button을 사용하여 사칙연산을 하는 계산기</p>
+      <label for="basic2-input-1">입력 1</label>
+      <input type="text" id="basic2-input-1" />
+      <label for="basic2-input-2">입력 2</label>
+      <input type="text" id="basic2-input-2" />
+      <button class="basic2-result-plus">+</button>
+      <button class="basic2-result-minus">-</button>
+      <button class="basic2-result-mutiply">x</button>
+      <button class="basic2-result-divide">/</button>
+      <p>결과</p>
+      <p class="basic2-result-content"></p>
+    </section>
+    <script src="../js/calc.js"></script>
+  </body>
+</html>
