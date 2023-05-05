@@ -1,23 +1,51 @@
-const basic1Input1 = document.querySelector("#basic1-input-1").value;
+/////////////////
+//basic1 계산기
+const basic1Input1 = document.querySelector("#basic1-input-1");
 
-const basic1Input2 = document.querySelector("#basic1-input-2").value;
+const basic1Input2 = document.querySelector("#basic1-input-2");
 
 const basic1SymbolRadio = document.querySelectorAll(
   "input[name='basic1-symbol-radio']"
 );
-// basic1SymbolRadio.addEventListener("change", (event) => {
-//   console.log(event.target.value);
-// });
 
 const basic1ResultButton = document.querySelector(".basic1-result-button");
 
 const basic1ResultContent = document.querySelector(".basic1-result-content");
 
+const basic1Symbol = "";
+basic1ResultButton.addEventListener("click", () => {
+  console.log(basic1SymbolRadio);
+  let result = 0;
+  for (let i = 0; i < basic1SymbolRadio.length; i++) {
+    console.log(basic1SymbolRadio[i].checked);
+    if (basic1SymbolRadio[i].checked) {
+      if (basic1SymbolRadio[i].value == "plus") {
+        result = Number(basic1Input1.value) + Number(basic1Input2.value);
+      } else if (basic1SymbolRadio[i].value == "minus") {
+        result = Number(basic1Input1.value) - Number(basic1Input2.value);
+      } else if (basic1SymbolRadio[i].value == "multiply") {
+        result = Number(basic1Input1.value) * Number(basic1Input2.value);
+      } else {
+        result = Number(basic1Input1.value) / Number(basic1Input2.value);
+      }
+    }
+  }
+  basic1ResultContent.textContent = result;
+  basic1Input1.value = "";
+  basic1Input2.value = "";
+  result = 0;
+});
+
+// basic1SymbolRadio.addEventListener("change", (event) => {
+//   console.log(event.target.value);
+// });
+
 // basic1Input1.addEventListener("change", () => {
 //   const result = basic1Input1 + basic1Input2;
 // });
 
-///////////////////
+//////////////////////////
+//basic2 계산기
 const basic2Input1 = document.querySelector("#basic2-input-1");
 const basic2Input2 = document.querySelector("#basic2-input-2");
 
@@ -65,3 +93,4 @@ basic2ResultDivide.addEventListener("click", () => {
 
   basic2ResultContent.textContent = result;
 });
+/////////
