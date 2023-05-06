@@ -35,14 +35,7 @@ basic1ResultButton.addEventListener("click", () => {
   basic1Input2.value = "";
   result = 0;
 });
-
-// basic1SymbolRadio.addEventListener("change", (event) => {
-//   console.log(event.target.value);
-// });
-
-// basic1Input1.addEventListener("change", () => {
-//   const result = basic1Input1 + basic1Input2;
-// });
+///////////////////////
 
 //////////////////////////
 //basic2 계산기
